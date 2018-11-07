@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.0/style/jquery.jscrollpane.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Technical Documentation Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="nav d-flex flex-column" id="navbar">
+
+    <header class="lead text-center font-weight-bold m-4">CSS Functions</header>
+
+    <div class="menu">
+      <a class="nav-link chapter" href="#Disclaimer">Disclaimer</a>
+      <a class="nav-link chapter" href="#Introduction">Introduction</a>
+      <a class="nav-link chapter" href="#Functions">Functions</a>
+
+      <ol>
+        <li><a class="nav-link" href="#attr()">attr()</a></li>
+        <li><a class="nav-link" href="#blur()">blur()</a></li>
+        <li><a class="nav-link" href="#brightness()">brightness()</a></li>
+        <li><a class="nav-link" href="#calc()">calc()</a></li>
+        <li><a class="nav-link" href="#circle()">circle()</a></li>
+        <li><a class="nav-link" href="#contrast()">contrast()</a></li>
+        <li><a class="nav-link" href="#counter(),_counters()">counter(), counters()</a></li>
+        <li><a class="nav-link" href="#cubic-bezier()">cubic-bezier()</a></li>
+        <li><a class="nav-link" href="#drop-shadow()">drop-shadow()</a></li>
+        <li><a class="nav-link" href="#ellipse()">ellipse()</a></li>
+        <li><a class="nav-link" href="#grayscale()">grayscale()</a></li>
+        <li><a class="nav-link" href="#hsl(),_hsla()">hsl(), hsla()</a></li>
+        <li><a class="nav-link" href="#hue-rotate()">hue-rotate()</a></li>
+        <li><a class="nav-link" href="#inset()">inset()</a></li>
+        <li><a class="nav-link" href="#invert()">invert()</a></li>
+        <li><a class="nav-link" href="#linear-gradient(),_radial-gradient()">linear-gradient(), radial-gradient()</a></li>
+        <li><a class="nav-link" href="#matrix(),_matrix3d()">matrix(), matrix3d()</a></li>
+        <li><a class="nav-link" href="#opacity()">opacity()</a></li>
+        <li><a class="nav-link" href="#perspective()">perspective()</a></li>
+        <li><a class="nav-link" href="#polygon()">polygon()</a></li>
+        <li><a class="nav-link" href="#repeating-linear-gradient(),_repeating-radial-gradient()">repeating-linear-gradient(), repeating-radial-gradient()</a></li>
+        <li><a class="nav-link" href="#rgb(),_rgba()">rgb(), rgba()</a></li>
+        <li><a class="nav-link" href="#rotate(),_rotateX(),_rotateY(),_rotateZ(),_rotate3d()">rotate(), rotateX(), rotateY(), rotateZ(), rotate3d()</a></li>
+        <li><a class="nav-link" href="#saturate()">saturate()</a></li>
+        <li><a class="nav-link" href="#sepia()">sepia()</a></li>
+        <li><a class="nav-link" href="#scale(),_scaleX(),_scaleY(),_scaleZ(),_scale3d()">scale(), scaleX(), scaleY(), scaleZ(), scale3d()</a></li>
+        <li><a class="nav-link" href="#skew(),_skewX(),_skewY()">skew(), skewX(), skewY()</a></li>
+        <li><a class="nav-link" href="#symbols()">symbols()</a></li>
+        <li><a class="nav-link" href="#translate(),_translateX(),_translateY(),_translateZ(),_translate3d()">translate(), translateX(), translateY(), translateZ(), translate3d()</a></li>
+        <li><a class="nav-link" href="#url()">url()</a></li>
+        <li><a class="nav-link" href="#var()">var()</a></li>
+      </ol>
+
+      <a class="nav-link chapter" href="#References">References</a>
+    </div>
+
+  </nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="Disclaimer">
+      <header class="lead font-weight-bold">Disclaimer</header>
+      <article>
+        <p>This page is made for coding learning purposes only. All of the information is taken from <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">MDN docs CSS reference</a> page.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="Introduction">
+      <header class="lead font-weight-bold">Introduction</header>
+      <p><span class="font-weight-bold">CSS</span> (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser. The browser applies CSS style declarations to selected elements to display them properly. A style declaration
+        contains the properties and their values, which determine how a webpage looks.</p>
+      <p>CSS is one of the three core Web technologies, along with HTML and JavaScript. CSS usually styles HTML elements, but can be also used with other markup languages like SVG or XML.</p>
+    </section>
+
+    <section class="main-section" id="Functions">
+      <header class="lead font-weight-bold">Functions</header>
+      <article>
+        <p>CSS functions are used as a value for various CSS properties.</p>
+      </article>
+    </section>
+
+    <section class="main-section" id="attr()">
+      <header class="lead font-weight-bold">attr()</header>
+      <article>
+        <p>The <code>attr()</code> CSS function is used to retrieve the value of an attribute of the selected element and use it in the style sheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element's
+          originating element is returned.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>attr(&lt;attr-name&gt; &lt;type-or-unit&gt;? [, &lt;attr-fallback&gt; ]?)</code>
+        <p class="example font-weight-bold">Example</p>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,q_100,w_646/v1529586359/Doc page/attr.png" alt="code for attr function">
+      </article>
+    </section>
+
+    <section class="main-section" id="blur()">
+      <header class="lead font-weight-bold">blur()</header>
+      <article>
+        <p>The <code>blur()</code> function is used with the <code>filter</code> property to apply a Gaussian blur to the input image.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>blur(radius)</code>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: blur(4px);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="brightness()">
+      <header class="lead font-weight-bold">brightness()</header>
+      <article>
+        <p>The CSS <code>brightness()</code> function is used with the <code>filter</code> property to apply a linear multiplier to the input image, making it appear brighter or darker.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>brightness(amount)</code>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: brightness(1);</code><br>
+        <code>filter: brightness(50%);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="calc()">
+      <header class="lead font-weight-bold">calc()</header>
+      <article>
+        <p>The CSS <code>calc()</code> function lets you perform calculations when specifying CSS property values.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>calc(&lt;calc-sum&gt;)</code>
+        <p class="example font-weight-bold">Example</p>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_288,q_100,w_646/v1529588229/Doc%20page/calc.png">
+      </article>
+    </section>
+
+    <section class="main-section" id="circle()">
+      <header class="lead font-weight-bold">circle()</header>
+      <article>
+        <p>The <code>circle()</code> function is used to define a circle.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>circle([&lt;shape-radius&gt;]? [at &lt;position&gt;]?)</code>
+        <p>The <code>&lt;shape-radius&gt;</code> argument represents r, the radius of the circle. Negative values are invalid. The <code>&lt;position&gt;</code> argument defines the center of the circle. This defaults to center if omitted.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>clip-path: circle(6rem at 12rem 8rem);</code><br>
+        <img src="https://res.cloudinary.com/cremz/image/upload/q_100/v1529589133/Doc%20page/circle.png" alt="circle function result">
+      </article>
+    </section>
+
+    <section class="main-section" id="contrast()">
+      <header class="lead font-weight-bold">contrast()</header>
+      <article>
+        <p>The <code>contrast()</code> CSS function adjusts the contrast of the input image. Its result is a <code>filter</code> function.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>contrast(amount)</code>
+        <p>The contrast of the result, specified as a <span class="font-weight-blod">number</span> or a <span class="font-weight-blod">percentage</span>. A value under 100% decreases the contrast, while a value over 100% increases it. A value of 0% will
+          create an image that is completely gray, while a value of 100% leaves the input unchanged. The lacuna value for interpolation is 1.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: contrast(1.75);</code><br>
+        <code>filter: contrast(50%);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="counter(),_counters()">
+      <header class="lead font-weight-bold">counter(), counters()</header>
+      <article>
+        <p><span class="font-weight-bold">CSS counters</span> let you adjust the appearance of content based on its location in a document. For example, you can use counters to automatically number the headings in a webpage. Counters are, in essence, variables
+          maintained by CSS whose values may be incremented by CSS rules to track how many times they're used. The value of a counter can be displayed using either the <code>counter()</code> or <code>counters()</code> function in a <code>content</code>          property.</p>
+        <p>The <code>counter()</code> function has two forms: <code>counter(name)</code> or <code>counter(name, style)</code>. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted
+          in the specified style (decimal by default).</p>
+        <p>The <code>counters()</code> function also has two forms: <code>counters(name, string)</code> or <code>counters(name, string, style)</code>. The generated text is the value of all counters with the given name in scope at the given pseudo-element,
+          from outermost to innermost, separated by the specified string. The counters are rendered in the indicated style (decimal by default).</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>counter(name)</code><br>
+        <code>counter(name, style)</code><br>
+        <code>counters(name, string)</code><br>
+        <code>counters(name, string, style)</code>
+        <p class="example font-weight-bold">Example</p>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_288,q_100,w_646/v1529594761/Doc%20page/counters.png" alt="counters example">
+      </article>
+    </section>
+
+    <section class="main-section" id="cubic-bezier()">
+      <header class="lead font-weight-bold">cubic-bezier()</header>
+      <article>
+        <p>The <code>cubic-bezier()</code> functional notation defines a cubic Bézier curve. As these curves are continuous, they are often used to smooth down the start and end of the animation and are therefore sometimes called <span class="font-italic">easing functions</span>.</p>
+        <p>A cubic Bézier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the
+          output range). P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>cubic-bezier(x1, y1, x2, y2)</code>
+        <p><span class="font-weight-bold">x1, y1, x2, y2</span> are number values representing the abscissas, and ordinates of the P1 and P2 points defining the cubic Bézier curve. x1 and x2 must be in the range [0, 1] or the value is invalid.</p>
+        <p class="example font-weight-bold">Example</p>
+        <a class="links" href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_cubic-bezier" target="_blank">See here</a>
+      </article>
+    </section>
+
+    <section class="main-section" id="drop-shadow()">
+      <header class="lead font-weight-bold">drop-shadow()</header>
+      <article>
+        <p>The <code>drop-shadow()</code> CSS function applies a drop shadow effect to the input image. Its result is a <code>filter</code> function.</p>
+        <p> This function is similar to the more established <code>box-shadow</code> property; the difference is that with filters, some browsers provide hardware acceleration for better performance.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>drop-shadow(<span class="font-italic">offset-x offset-y blur-radius spread-radius color</span>)</code>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="ellipse()">
+      <header class="lead font-weight-bold">ellipse()</header>
+      <article>
+        <p>The <code>ellipse()</code> function defines an ellipse shape.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>ellipse([&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]?)</code>
+        <p>The <code>shape-radius</code> arguments represent rx and ry, the x-axis and y-axis radii of the ellipse, in that order. Negative values for either radius are invalid. Percentage values here are resolved against the used width (for the rx value)
+          and the used height (for the ry value) of the reference box. The <code>position</code> argument defines the center of the ellipse. This defaults to center if omitted.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>clip-path: ellipse(115px 55px at 50% 40%);</code><br>
+        <img src="https://res.cloudinary.com/cremz/image/upload/q_100/v1529596910/Doc%20page/ellipse.png" alt="ellipse example">
+      </article>
+    </section>
+
+    <section class="main-section" id="grayscale()">
+      <header class="lead font-weight-bold">grayscale()</header>
+      <article>
+        <p>The <code>grayscale()</code> CSS function converts the input image to grayscale. Its result is a <code>filter</code> function.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>grayscale(amount)</code>
+        <p>The amount of the conversion, specified as a <code>number</code> or a <code>percentage</code>. A value of 100% is completely grayscale, while a value of 0% leaves the input unchanged. Values between 0% and 100% are linear multipliers on the effect.
+          The lacuna value for interpolation is 0.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: grayscale(0.20);</code><br>
+        <code>filter: grayscale(60%);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="hsl(),_hsla()">
+      <header class="lead font-weight-bold">hsl(), hsla()</header>
+      <article>
+        <p>Colors can be defined according to their hue, saturation, and lightness (the HSL model) via the hsl() and hsla() functional notations. One advantage of HSL over RGB is that it is more intuitive: you can guess at the color you want, and tweak it
+          from there. It is also easier to create a set of matching colors (e.g., by keeping the hue the same, while varying the lightness/darkness and saturation).</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>hsl(H, S, L[, A])</code><br>
+        <code>hsla(H, S, L, A)</code>
+        <p><span class="font-weight-bold">H</span> (hue) is an <code>angle</code> code of the color circle given in degs, rads, grads, or turns in <a class="links" href="https://drafts.csswg.org/css-color/#the-hsl-notation" target="_blank">CSS Color Module Level 4</a>.
+          When written as a unitless <code>number</code>, it is interpreted as degrees, as it was specified in <a class="links" href="https://drafts.csswg.org/css-color-3/#hsl-color" target="_blank">CSS Color Module Level 3</a>.</p>
+        <p><span class="font-weight-bold">S</span> (saturation) and <span class="font-weight-bold">L</span> (lightness) are percentages. 100% <span class="font-weight-bold">saturation</span> is completely saturated, while 0% is completely unsaturated (gray).
+          100% <span class="font-weight-bold">lightness</span> is white, 0% lightness is black, and 50% lightness is “normal.”</p>
+        <p><span class="font-weight-bold">A</span> (alpha) can be a <code>number</code> between 0 and 1, or a <code>percentage</code>, where the number 1 corresponds to 100% (full opacity).</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>hsl(270,60%,70%)</code><br>
+        <code>hsla(240, 100%, 50%, .05)</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="hue-rotate()">
+      <header class="lead font-weight-bold">hue-rotate()</header>
+      <article>
+        <p>The <code>hue-rotate()</code> CSS function rotates the hue of an element and its contents. Its result is a <code>filter</code> function.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>hue-rotate(angle)</code>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: hue-rotate(90deg);</code><br>
+        <code>filter: hue-rotate(3.142rad);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="inset()">
+      <header class="lead font-weight-bold">inset()</header>
+      <article>
+        <p>Defines an inset rectangle.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>inset(&lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]?)</code>
+        <p>When all of the first four arguments are supplied they represent the top, right, bottom and left offsets from the reference box inward that define the positions of the edges of the inset rectangle. These arguments follow the syntax of the margin
+          shorthand, that let you set all four insets with one, two or four values.</p>
+        <p>The optional <code>border-radius</code> argument(s) define rounded corners for the inset rectangle using the border-radius shorthand syntax.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>clip-path: inset(22% 12% 15px 35px);</code><br>
+        <img src="https://res.cloudinary.com/cremz/image/upload/q_100/v1529602012/Doc%20page/inset.png" alt="inset function example">
+      </article>
+    </section>
+
+    <section class="main-section" id="invert()">
+      <header class="lead font-weight-bold">invert()</header>
+      <article>
+        <p>The <code>invert()</code> CSS function inverts the color samples in the input image. Its result is a <code>filter</code> function.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>invert(amount)</code>
+        <p>The amount of the conversion, specified as a <code>number</code> or a <code>percentage</code>. A value of 100% is completely inverted, while a value of 0% leaves the input unchanged. Values between 0% and 100% are linear multipliers on the effect.
+          The lacuna value for interpolation is 0.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: invert(0.30);</code><br>
+        <code>filter: invert(70%);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="linear-gradient(),_radial-gradient()">
+      <header class="lead font-weight-bold">linear-gradient(), radial-gradient()</header>
+      <article>
+        <p>The <code>linear-gradient()</code> CSS function creates an image consisting of a progressive transition between two or more colors along a straight line.</p>
+        <p>The <code>radial-gradient()</code> CSS function creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>background: linear-gradient(direction, color-stop1, color-stop2, ...);</code>
+        <p><code>direction</code> defines a starting point and a direction (or an angle) along with the gradient effect. If specified, it consists of the word <span class="font-weight-bold">to</span> and up to two keywords: one indicates the horizontal side
+          (<span class="font-weight-bold">left</span> or <span class="font-weight-bold">right</span>), and the other the vertical side (<span class="font-weight-bold">top</span> or <span class="font-weight-bold">bottom</span>). The order of the side keywords
+          does not matter. If unspecified, it defaults to to bottom. The values <span class="font-weight-bold">to top, to bottom, to left, to right</span> are equivalent to the angles <span class="font-weight-bold">0deg, 180deg, 270deg, 90deg</span>.
+          The other values are translated into an angle.</p>
+        <p>Color stops are the colors you want to render smooth transitions among. This value consists of a color value, followed by an optional stop position (a percentage between 0% and 100% or a length along the gradient axis).</p>
+        <code>background: radial-gradient(shape size at position, start-color, ..., last-color);</code>
+        <p><code>shape</code> defines the shape of the gradient. Possible values: <span class="font-weight-bold">ellipse</span> (default) and <span class="font-weight-bold">circle</span>.</p>
+        <p><code>size</code> defines the size of the gradient. Possible values: <span class="font-weight-bold">farthest-corner</span> (default), <span class="font-weight-bold">closest-side, closest-corner, farthest-side</span></p>
+        <p><code>position</code> defines the position of the gradient. Default is <span class="font-weight-bold">center</span></p>
+        <p class="example font-weight-bold">Example</p><br>
+        <code>background: linear-gradient(#e66465, #9198e5);</code><br>
+        <code>background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),<br>linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),<br>linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);</code><br>
+        <code>background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="matrix(),_matrix3d()">
+      <header class="lead font-weight-bold">matrix(), matrix3d()</header>
+      <article>
+        <p>The <code>matrix()</code> CSS function defines a homogeneous 2D transformation matrix. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>matrix3d()</code> CSS function defines a 3D transformation as a 4x4 homogeneous matrix. Its result is a <code>transform</code> function data type.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>matrix(a, b, c, d, tx, ty)</code>
+        <p><span class="font-weight-bold">a b c d</span> are <code>number</code>s describing the linear transformation.</p>
+        <p><span class="font-weight-bold">tx ty</span> are <code>number</code>s describing the translation to apply.</p>
+        <code>matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)</code>
+        <p><span class="font-weight-bold">a1 b1 c1 d1 a2 b2 c2 d2 a3 b3 c3 d3 d4</span> are <code>number</code>s describing the linear transformation.</p>
+        <p><span class="font-weight-bold">a4 b4 c4</span> are <code>number</code>s describing the translation to apply.</p>
+        <p class="example font-weight-bold">Example</p>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_288,q_100,w_646/v1529604818/Doc%20page/matrix2d.png" alt="matrix2d function example">
+      </article>
+    </section>
+
+    <section class="main-section" id="opacity()">
+      <header class="lead font-weight-bold">opacity()</header>
+      <article>
+        <p>The <code>opacity()</code> CSS function applies transparency to the samples in the input image. Its result is a <code>filter</code> function.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>opacity(amount)</code>
+        <p>The amount of the conversion, specified as a <code>number</code> or a <code>percentage</code>. A value of 0% is completely transparent, while a value of 100% leaves the input unchanged. Values between 0% and 100% are linear multipliers on the
+          effect. The lacuna value for interpolation is 1.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: opacity(80%);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="perspective()">
+      <header class="lead font-weight-bold">perspective()</header>
+      <article>
+        <p>The <code>perspective()</code> CSS function defines a transformation that sets the distance between the user and the z=0 plane. Its result is a <code>transform</code> function data type.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>perspective(d)</code>
+        <p><span class="font-weight-bold">d</span> is a <code>length</code> representing the distance from the user to the z=0 plane. If it is 0 or a negative value, no perspective transform is applied. A positive value makes the element appear closer to
+          the user, a negative value farther.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>transform: perspective(800px);</code><br>
+        <img src="https://res.cloudinary.com/cremz/image/upload/q_100/v1529649704/Doc%20page/perspective_bcsrby.png" alt="perspective function example">
+      </article>
+    </section>
+
+    <section class="main-section" id="polygon()">
+      <header class="lead font-weight-bold">polygon()</header>
+      <article>
+        <p>The <code>polygon()</code> function is a shape function used to specify a <code>basic-shape</code>.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>polygon([&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]#)</code>
+        <p><code>fill-rule</code> represents the filling rule used to determine the interior of the polygon. Possible values are <span class="font-weight-bold">nonzero</span> and <span class="font-weight-bold">evenodd</span>. Default value when omitted is
+          nonzero.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>clip-path: polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%, 50% 81.3%, 80.9% 97.6%, 75% 63.1%, 100% 38.8%, 65.5% 33.8%);</code><br>
+        <img src="https://res.cloudinary.com/cremz/image/upload/q_100/v1529650674/Doc%20page/polygon.png" alt="polygon function example">
+
+      </article>
+    </section>
+
+    <section class="main-section" id="repeating-linear-gradient(),_repeating-radial-gradient()">
+      <header class="lead font-weight-bold">repeating-linear-gradient(), repeating-radial-gradient()</header>
+      <article>
+        <p>The <code>repeating-linear-gradient()</code> CSS function creates an image consisting of repeating linear gradients. It is similar to <a class="links" href="#linear-gradient()_radial-gradient()">linear-gradient()</a> and takes the same arguments,
+          but it repeats the color stops infinitely in all directions so as to cover its entire container.</p>
+        <p>The <code>repeating-radial-gradient()</code> CSS function creates an image consisting of repeating gradients that radiate from an origin. It is similar to <a class="links" href="#linear-gradient()_radial-gradient()">radial-gradient()</a> and takes
+          the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>background: repeating-linear-gradient(angle | to side-or-corner, color-stop1, color-stop2, ...); </code><br>
+        <code>background: repeating-radial-gradient(shape size at position, start-color, ..., last-color);</code>
+        <p>The gradient's shape value can be <span class="font-weight-bold">circle</span> (meaning that the gradient's shape is a circle with constant radius) or <span class="font-weight-bold">ellipse</span> (meaning that the shape is an axis-aligned ellipse).
+          If unspecified, it defaults to ellipse.</p>
+        <p class="example font-weight-bold">Example</p>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_288,q_100,w_646/v1529651369/Doc%20page/repeat_linear_o98tyc.png" alt="repeat linear gradient example">
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_288,q_100,w_646/v1529651888/Doc%20page/repeat_radial_ssuvmm.png" alt="repeat radial gradient example">
+      </article>
+    </section>
+
+    <section class="main-section" id="rgb(),_rgba()">
+      <header class="lead font-weight-bold">rgb(), rgba()</header>
+      <article>
+        <p>Colors can be defined according to their red, green, and blue components (the <span class="font-weight-bold">RGB</span> model) by using hexadecimal and functional notations. The optional alpha component represents transparency.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>rgb(R, G, B[, A])</code><br>
+        <code>rgba(R, G, B, A)</code>
+        <p><span class="font-weight-bold">R</span> (red), <span class="font-weight-bold">G</span> (green), and <span class="font-weight-bold">B</span> (blue) can be either <code>integer</code>s or <code>percentage</code>s, where the number 255 corresponds
+          to 100%. <span class="font-weight-bold">A</span> (alpha) can be a <code>number</code> between 0 and 1, or a <code>percentage</code>, where the number 1 corresponds to 100% (full opacity).</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>rgb(100%, 0%, 60%)</code><br>
+        <code>rgba(51, 170, 51, .1)</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="rotate(),_rotateX(),_rotateY(),_rotateZ(),_rotate3d()">
+      <header class="lead font-weight-bold">rotate(), rotateX(), rotateY(), rotateZ(), rotate3d()</header>
+      <article>
+        <p>The <code>rotate()</code> CSS function defines a transformation that rotates an element around a fixed point on the 2D plane, without deforming it. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>rotateX()</code> CSS function defines a transformation that rotates an element around the abscissa (horizontal axis) without deforming it.</p>
+        <p>The <code>rotateY()</code> CSS function defines a transformation that rotates an element around the ordinate (vertical axis) without deforming it.</p>
+        <p>The <code>rotateZ()</code> CSS function defines a transformation that rotates an element around the z-axis without deforming it.</p>
+        <p>The <code>rotate3d()</code> CSS function defines a transformation that rotates an element around a fixed axis in 3D space, without deforming it.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>rotate(angle)</code><br>
+        <code>rotateX(angle)</code><br>
+        <code>rotateY(angle)</code><br>
+        <code>rotateZ(angle)</code><br>
+        <code>rotate3d(x, y, z, angle)</code>
+        <p>A positive angle denotes a clockwise rotation, a negative angle a counter-clockwise one.</p>
+        <p><span class="font-weight-bold">x, y, z</span> are numbers describing the x, y and z coordinates and have values between 0 and 1.</p>
+        <p class="example font-weight-bold">Example</p>
+        <p>The example above is for the <code>rotate()</code> function. The other functions work similar. A syntax example for the <code>rotate3d()</code> function is:</p>
+        <code>transform: rotate3d(1, 1, 1, 45deg);</code><br>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,q_100,w_646/v1529652713/Doc%20page/rotate.png" alt="rotate function example">
+      </article>
+    </section>
+
+    <section class="main-section" id="saturate()">
+      <header class="lead font-weight-bold">saturate()</header>
+      <article>
+        <p>The <code>saturate()</code> CSS function super-saturates or desaturates the input image. Its result is a <code>filter</code> function.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>saturate(amount)</code>
+        <p>The amount of the conversion, specified as a <code>number</code> or a <code>percentage</code>. A value under 100% desaturates the image, while a value over 100% super-saturates it. A value of 0% is completely unsaturated, while a value of 100%
+          leaves the input unchanged. The lacuna value for interpolation is 1.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: saturate(4);</code><br>
+        <code>filter: saturate(50%);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="sepia()">
+      <header class="lead font-weight-bold">sepia()</header>
+      <article>
+        <p>The <code>sepia()</code> CSS function converts the input image to sepia, giving it a warmer, more yellow/brown appearance. Its result is a <code>filter</code>function.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>sepia(amount)</code>
+        <p>The amount of the conversion, specified as a <code>number</code> or a <code>percentage</code>. A value of 100% is completely sepia, while a value of 0% leaves the input unchanged. Values between 0% and 100% are linear multipliers on the effect.
+          The lacuna value for interpolation is 0.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>filter: sepia(0.20);</code><br>
+        <code>filter: sepia(60%);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="scale(),_scaleX(),_scaleY(),_scaleZ(),_scale3d()">
+      <header class="lead font-weight-bold">scale(), scaleX(), scaleY(), scaleZ(), scale3d()</header>
+      <article>
+        <p>The <code>scale()</code> CSS function defines a transformation that resizes an element on the 2D plane. Because the amount of scaling is defined by a vector, it can resize the horizontal and vertical dimensions at different scales. Its result
+          is a <code>transform</code> function data type.</p>
+        <p>The <code>scaleX()</code> CSS function defines a transformation that resizes an element along the x-axis (horizontally). Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>scaleY()</code> CSS function defines a transformation that resizes an element along the y-axis (vertically). Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>scaleZ()</code> CSS function defines a transformation that resizes an element along the z-axis. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>scale3d()</code> CSS function defines a transformation that resizes an element in 3D space. Because the amount of scaling is defined by a vector, it can resize different dimensions at different scales. Its result is a <code>transform</code>          function data type.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>scale(sx)</code><br>
+        <code>scale(sx, sy)</code><br>
+        <code>scaleX(s)</code><br>
+        <code>scaleY(s)</code><br>
+        <code>scaleZ(s)</code><br>
+        <code>scale3d(sx, sy, sz)</code>
+        <p><span class="font-weight-bold">sx</span> is a <code>number</code> representing the abscissa of the scaling vector. <span class="font-weight-bold">sy</span> is a <code>number</code> representing the ordinate of the scaling vector. If not defined,
+          its default value is <span class="font-weight-bold">sx</span>, resulting in a uniform scaling that preserves the element's aspect ratio.</p>
+        <p><span class="font-weight-bold">s</span> is a <code>number</code> representing the scaling factor to apply on the abscissa of each point of the element.</p>
+        <p><span class="font-weight-bold">sz</span> is a <code>number</code> representing the z-component of the scaling vector.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>transform: scale(0.7);</code><br>
+        <code>transform: scaleX(0.6);</code><br>
+        <code>transform: scaleY(0.6)</code><br>
+        <code>transform: scaleZ(1.4);</code><br>
+        <code>transform: scale3d(1.3, 1.3, 1.3);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="skew(),_skewX(),_skewY()">
+      <header class="lead font-weight-bold">skew(), skewX(), skewY()</header>
+      <article>
+        <p>The <code>skew()</code> CSS function defines a transformation that skews an element on the 2D plane. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>skewX()</code> CSS function defines a transformation that skews an element in the horizontal direction on the 2D plane. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>skewY()</code> CSS function defines a transformation that skews an element in the vertical direction on the 2D plane. Its result is a <code>transform</code> function data type.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>skew(ax)</code><br>
+        <code>skew(ax, ay)</code><br>
+        <code>skewX(a)</code><br>
+        <code>skewY(a)</code>
+        <p><span class="font-weight-bold">ax/a</span> is an <code>angle</code> representing the angle to use to distort the element along the abscissa. <span class="font-weight-bold">ay/a</span> is an <code>angle</code> representing the angle to use to distort
+          the element along the ordinate. If not defined, its default value is 0, resulting in a purely horizontal skewing.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>transform: skew(15deg, 15deg);</code><br>
+        <code>transform: skewX(10deg);</code><br>
+        <code>transform: skewY(40deg);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="symbols()">
+      <header class="lead font-weight-bold">symbols()</header>
+      <article>
+        <p>The <code>symbols()</code> CSS function lets you define counter styles inline, directly as the value of a property such as <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style" target="_blank">list-style</a>. Unlike
+          <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style" target="_blank">@counter-style</a>, <code>symbols()</code> is anonymous (i.e., it can only be used once). Although less powerful, it is shorter and easier
+          to write than <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style" target="_blank">@counter-style</a>.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>symbols() = symbols(&lt;symbols-type&gt;? [&lt;string> | &lt;image&gt;]+ );</code>
+        <p><code>&lt;symbols-type&gt;</code> can be one of the following:</p>
+        <ul class="symb">
+          <li><span class="font-weight-bold">cyclic: </span>The system cycles through the given values in the order of their definition, and returns to the start when it reaches the end.</li>
+          <li><span class="font-weight-bold">numeric: </span>The system interprets the given values as the successive units of a place-value numbering system.</li>
+          <li><span class="font-weight-bold">alphabetic: </span>The system interprets the given values as the digits of an alphabetic numbering system, like a place-value numbering system but without 0.</li>
+          <li><span class="font-weight-bold">symbolic: </span>The system cycles through the values, printing them an additional time at each cycle (one time for the first cycle, two times for the second, etc.).</li>
+          <li><span class="font-weight-bold">fixed: </span>The system cycles through the given values once, then falls back to Arabic numerals.</li>
+        </ul>
+        <p class="example font-weight-bold">Example</p>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_285,q_100,w_646/v1529661827/Doc%20page/symbols.png" alt="symbols function example">
+      </article>
+    </section>
+
+    <section class="main-section" id="translate(),_translateX(),_translateY(),_translateZ(),_translate3d()">
+      <header class="lead font-weight-bold">translate(), translateX(), translateY(), translateZ(), translate3d()</header>
+      <article>
+        <p>The <code>translate()</code> CSS function repositions an element in the horizontal and/or vertical directions. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>translateX()</code> CSS function repositions an element horizontally on the 2D plane. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>translateY()</code> CSS function repositions an element vertically on the 2D plane. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>translateZ()</code> CSS function repositions an element along the z-axis in 3D space, i.e., closer to or farther away from the viewer. Its result is a <code>transform</code> function data type.</p>
+        <p>The <code>translate3d()</code> CSS function repositions an element in 3D space. Its result is a <code>transform</code> function data type.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>translate(tx)</code><br>
+        <code>translate(tx, ty)</code><br>
+        <code>translateX(tx)</code><br>
+        <code>translateY(ty)</code><br>
+        <code>translateZ(tz)</code><br>
+        <code>translate3d(tx, ty, tz)</code>
+        <p><span class="font-weight-bold">tx</span> is a <code>length</code> representing the abscissa (x-coordinate) of the translating vector. <span class="font-weight-bold">ty</span> Is a <code>length</code> representing the ordinate of the translating
+          vector (or y-coordinate). If unspecified, its default value is 0. For example, <code>translate(2)</code> is equivalent to <code>translate(2, 0)</code>.</p>
+        <p><span class="font-weight-bold">tz</span> is a <code>length</code> representing the z-component of the translating vector. A positive value moves the element towards the viewer, and a negative value farther away.</p>
+        <p class="example font-weight-bold">Example</p>
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_288,q_100,w_646/v1529662575/Doc%20page/translate.png" alt="translate function example">
+        <img src="https://res.cloudinary.com/cremz/image/upload/c_scale,h_288,q_100,w_646/v1529663329/Doc%20page/translate3d.png" alt="translate3d function example">
+      </article>
+    </section>
+
+    <section class="main-section" id="url()">
+      <header class="lead font-weight-bold">url()</header>
+      <article>
+        <p>The <code>url</code> data type is specified using the <code>url()</code> functional notation. It may be written without quotes, or surrounded by single or double quotes. Relative URLs are allowed, and are relative to the URL of the stylesheet
+          (not to the URL of the web page).</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>&lt;a_css_property&gt;: url("http://mysite.example.com")</code><br>
+        <code>&lt;a_css_property&gt;: url('http://mysite.example.com')</code><br>
+        <code>&lt;a_css_property&gt;: url(http://mysite.example.com)</code>
+        <p class="example font-weight-bold">Example</p>
+        <code>ul { list-style: square url(http://www.example.com/redball.png); }</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="var()">
+      <header class="lead font-weight-bold">var()</header>
+      <article>
+        <p>The <code>var()</code> CSS function can be used to insert the value of a custom property (sometimes called a "CSS variable") instead of any part of a value of another property.</p>
+        <p class="syntax font-weight-bold">Syntax</p>
+        <code>var(&lt;custom-property-name&gt; [, &lt;declaration-value&gt;]?)</code>
+        <p><code>custom-property-name</code> is the referenced custom property’s name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented
+          here.</p>
+        <p><code>declaration-value</code> is the fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets,
+          i.e. ), ], or }, top-level semicolons, or exclamation marks.</p>
+        <p class="example font-weight-bold">Example</p>
+        <code>background-color: var(--main-bg-color);</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="References">
+      <header class="lead font-weight-bold">References</header>
+      <article>
+        <p>For more information on each CSS function acces <a class="links" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">MDN docs CSS reference</a> page, go to the alphabetical index and search for the desired function.</p>
+      </article>
+    </section>
+
+  </main>
+
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.2.0/script/jquery.jscrollpane.min.js'></script>
+<script src='https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+html,
+body {
+  height: 100%;
+  background: #e6e6e6;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+}
+
+.nav{
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(194, 214, 214, 30%) !important;
+  text-align: left;
+}
+
+.nav header {
+  font-size: 18px;
+  color: #001a00;
+}
+
+.menu {
+  height: 80vh;
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+
+.menu .chapter {
+  font-size: 16px;
+}
+
+ol {
+  list-style-position: outside;
+  color: #003300;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.nav-link:link {
+  font-weight: bold;
+  font-size: 14px;
+  color: #003300;
+}
+
+.nav-link:visited {
+  color: #666666;
+}
+
+.nav-link:hover {
+  color: #00004d;
+}
+
+main {
+  width: 65%;
+  overflow-x: scroll;
+  position: relative;
+  left: 320px;
+  right: 0px !important;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: 30px;
+  text-align: justify;
+  color: #001a00;
+  font-weight: 500;
+}
+
+#Disclaimer {
+  color: red;
+}
+
+.main-section header {
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.main-section p {
+  font-size: 18px;
+}
+
+.syntax,
+.example {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.syntax ~ code,
+.example ~ code {
+  padding: 15px;
+  color: #cccc00;
+  background: #262626;
+  font-size: 16px;
+  display: inline-block;
+  margin: 20px;
+}
+
+p code {
+  color: blue;
+  font-size: 18px;
+}
+
+img {
+  margin: 20px;
+  display: block;
+  border: 1px solid black;
+}
+
+.links {
+  color: #334d00;
+  font-weight: bold;
+}
+
+/*Customize scrollbar*/
+
+.jspTrack {
+  background: #e6ffe6;
+  position: relative;
+}
+
+.jspDrag {
+  background: #b3ffb3;
+  position: relative;
+  border-radius: 10px;
+  /*cursor: pointer;*/
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    width: 150px;
+  }
+
+  .nav header {
+    font-size: 14px;
+  }
+  .menu {
+    margin-left: 0 !important;
+    width: 145px;
+  }
+
+  .menu .chapter {
+    font-size: 12px !important;
+  }
+  .nav-link {
+    font-size: 10px !important;
+  }
+
+  ol {
+    font-size: 10px !important;
+  }
+
+  main {
+    width: calc(100% - 150px);
+    position: relative;
+    left: 150px;
+    right: 0px !important;
+    margin-left: 2px;
+    text-align: left;
+  }
+
+  #references {
+    margin-bottom: 30px !important;
+  }
+
+  .main-section header {
+    font-size: 20px;
+    margin-bottom: 20px !important;
+    margin-top: 10px !important;
+  }
+
+  .main-section p {
+    font-size: 13px;
+  }
+
+  .syntax,
+  .example {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .syntax ~ code,
+  .example ~ code {
+    padding: 10px;
+    font-size: 10px;
+    margin: 10px;
+  }
+
+  p code {
+    font-size: 14px;
+  }
+
+  img {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+}
